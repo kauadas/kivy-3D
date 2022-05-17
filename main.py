@@ -25,7 +25,7 @@ def Mesh3D(vertices,indices):
     (b'color',3,'float')]
 
     
-    return Mesh(vertices=vertices,indices=indices,fmt=vex,mode="triangles")
+    return Mesh(vertices=vertices,indices=indices,fmt=vex,mode="lines")
 
 
 
@@ -46,10 +46,10 @@ class view3d(Widget):
         proj = Matrix().view_clip(-asp,asp,-1,1,1,100,1)
         self.canvas['projection_mat'] = proj
 
-        vertices,indices=load_file.load('cubo.obj')
+        vertices,indices=load_file.load('helmet.obj')
         
-        self.rot = Rotate(angle=30,origin=(0,1,-6),axis=(0,1,0))
-        Translate(0,0,-6)
+        self.rot = Rotate(angle=0,origin=(0,1,-6),axis=(0,1,0))
+        Translate(0,-5,-6)
         Mesh3D(load_file.process(vertices),indices)
 
 class app(App):

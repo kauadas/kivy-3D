@@ -29,7 +29,7 @@ def load(file):
 def process(vertices):
     result=[]
     for i in vertices:
-        result.append(i+[0,0,-1,0,0]+[1.,1.,1.])
+        result.append(i+[0,0,-1,0,0]+[0.,0.5,1.])
 
     return result
 
