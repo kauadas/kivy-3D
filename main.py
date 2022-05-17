@@ -38,7 +38,7 @@ class view3d(Widget):
         with self.canvas:
             self.draw()
 
-    def rodar(self,*args):
+    def rotate(self,*args):
         self.rot.angle+=1
 
     def draw(self):
